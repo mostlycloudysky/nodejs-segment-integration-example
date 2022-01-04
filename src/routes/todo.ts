@@ -34,14 +34,20 @@ router.post('/todo', (req, res) => {
 router.put('/todo/:todoId', (req, res) => {
 
     const tid = req.params.todoId
-    const todoIndex = todos.findIndex(todoItem => todoItem.id === tid)
+    console.log(typeof tid)
+    console.log(todos);
+    
+    const todoIndex = todos.findIndex(todoItem => todoItem.id == tid)
+    console.log(todoIndex)
 
-    if (todoIndex > 0) {
+    if (todoIndex >= 0) {
 
         todos[todoIndex] = {
             id: todos[todoIndex].id,
             text: req.body.text
         }
+        analytics.identify({ userId: 'sandeep', traits: { plan: 'Free' } })
+        analytics.track({ userId: 'sandeep', event: 'update todo', properties: {id: todos[todoIndex].id, text: todos[todoIndex].text} })     
         return res.status(200).json({message: 'udpated todo', todos: todos})
     }
 
