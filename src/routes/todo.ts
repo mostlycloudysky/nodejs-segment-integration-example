@@ -12,6 +12,8 @@ const router = express.Router()
 
 // Add todo
 router.get('/', (req, res, next) => {
+    analytics.identify({ userId: 'sandeep', traits: { plan: 'Free' } })
+    analytics.track({ userId: 'sandeep', event: 'get todos', properties: { todos: todos}}) 
     res.status(200).json({todos: todos})
 })
 
