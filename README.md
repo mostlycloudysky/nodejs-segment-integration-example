@@ -24,4 +24,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ## Thanks
-* To [Segment Team](https://segment.com/) for the documentation on the Destinations integration.
+* To [Segment Team](https://segment.com/) for the great documentation on the Destinations integration.
