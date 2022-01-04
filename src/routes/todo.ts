@@ -34,8 +34,6 @@ router.post('/todo', (req, res) => {
 router.put('/todo/:todoId', (req, res) => {
 
     const tid = req.params.todoId
-    console.log(typeof tid)
-    console.log(todos);
     
     const todoIndex = todos.findIndex(todoItem => todoItem.id == tid)
     console.log(todoIndex)
