@@ -1,8 +1,9 @@
 # nodejs-segment-integration-example
+
  This is an example repo containing the Segment integration for Slack (Posting messages) with Action Destinations
 
  # Segment Integration
-HTTP API wrapper for [The Air Quality index](http://aqicn.org) API using Node, TypeScript, Redis, express.
+
 Refer the following documentation on integrating Segment analytics into your nodebackend CRUD APIs with Slack Integraton(Posting events to Slack Channel)
  - [https://segment.com/docs/connections/sources/catalog/libraries/server/node/](http://aqicn.org)
  - [Segment Connection Destinations](https://segment.com/docs/connections/destinations/)
